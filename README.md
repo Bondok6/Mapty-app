@@ -1,3 +1,3 @@
 # Mapty-app
 
-<p align="center"> <h2> Still Working On It ⚒ </h2> </p>
+<h2 align="center"> Still Working On It ⚒ </h2> 
