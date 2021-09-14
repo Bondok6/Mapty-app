@@ -17,7 +17,21 @@ navigator?.geolocation.getCurrentPosition(
     // console.log(pos);
     const { latitude } = pos.coords;
     const { longitude } = pos.coords;
+    const coords = [latitude, longitude];
     console.log(`https://www.google.com/maps/@${latitude},${longitude}`);
+
+    // Leaflet -> third-party library to display map
+    var map = L.map("map").setView(coords, 13);
+
+    L.tileLayer("https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png", {
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+
+    L.marker(coords)
+      .addTo(map)
+      .bindPopup("A pretty CSS3 popup.<br> Easily customizable.")
+      .openPopup();
   },
   function () {
     alert("Could not acess you position");
