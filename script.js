@@ -21,19 +21,34 @@ navigator?.geolocation.getCurrentPosition(
     console.log(`https://www.google.com/maps/@${latitude},${longitude}`);
 
     // Leaflet -> third-party library to display map
-    var map = L.map("map").setView(coords, 13);
+    const map = L.map("map").setView(coords, 13);
 
     L.tileLayer("https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png", {
       attribution:
         '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     }).addTo(map);
 
-    L.marker(coords)
-      .addTo(map)
-      .bindPopup("A pretty CSS3 popup.<br> Easily customizable.")
-      .openPopup();
+    map.on("click", function (mapEvent) {
+      // console.log(mapEvent);
+      const { lat, lng } = mapEvent.latlng;
+      const newCoords = [lat, lng];
+
+      L.marker(newCoords)
+        .addTo(map)
+        .bindPopup(
+          L.popup({
+            maxWidth: 250,
+            minWidth: 100,
+            autoClose: false,
+            closeOnClick: false,
+            className: "running-popup",
+          })
+        )
+        .setPopupContent("Workouts")
+        .openPopup();
+    });
   },
   function () {
-    alert("Could not acess you position");
+    alert("Could not get you position");
   }
 );
