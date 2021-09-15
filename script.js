@@ -18,6 +18,7 @@ navigator?.geolocation.getCurrentPosition(
     const { latitude } = pos.coords;
     const { longitude } = pos.coords;
     const coords = [latitude, longitude];
+    console.log(coords);
     console.log(`https://www.google.com/maps/@${latitude},${longitude}`);
 
     // Leaflet -> third-party library to display map
