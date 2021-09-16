@@ -12,6 +12,7 @@ const inputCadence = document.querySelector(".form__input--cadence");
 const inputElevation = document.querySelector(".form__input--elevation");
 
 class App {
+  // private fields
   #map;
   #mapEvent;
 
@@ -92,10 +93,16 @@ class App {
       )
       .setPopupContent("Workouts")
       .openPopup();
+
+    form.classList.add("hidden");
   }
 }
 
 const app = new App();
+
+//____________________________________________________________________________________________
+
+// let map, mapEvent;
 
 // Geolocation Api -> is a browser api
 // navigator?.geolocation.getCurrentPosition(
