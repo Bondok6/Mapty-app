@@ -6,7 +6,7 @@
 
 ## Live Demo
 
-<!-- [Live Demo Link](https://bondok6.github.io/My-Portfolio/) -->
+[Live Demo Link](https://bondok6.github.io/Mapty-app/)
 
 
 ## Built with
@@ -17,7 +17,7 @@
 
 ## Additional Used
 
-- Leaflet map
 - Geolocation Api
 - LocalStorage Api
+- Leaflet map
 - Google Fonts
