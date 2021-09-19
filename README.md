@@ -6,7 +6,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://bondok6.github.io/Mapty-app/)
+> ### [Live Demo Link](https://bondok6.github.io/Mapty-app/)
 
 
 ## Built with
