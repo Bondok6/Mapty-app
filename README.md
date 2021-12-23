@@ -8,12 +8,12 @@
 
 > ### [Live Demo Link](https://bondok6.github.io/Mapty-app/)
 
-
 ## Built with
 
 - HTML
 - CSS
-- JavaScript (OOP)
+- JavaScript
+- OOP
 
 ## Additional Used
 
